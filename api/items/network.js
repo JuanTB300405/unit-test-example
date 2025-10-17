@@ -4,7 +4,7 @@ const router = Router();
 const ctrl = require('./index');
 const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm} = require('../../calculators/environment')
 const { areaCirculo } = require('../../calculators/calculo1')
-
+const area =  require('../../calculators/personal')
 const tableInjected = 'my_table'
 
 router.get('/env_test/:fuel', async (req, res) => {
@@ -38,6 +38,17 @@ router.get('/list', async (req, res) => {
         const id = req.params.id
         const list = await ctrl.list(tableInjected);
         response.success(req, res, list, 200);    
+    } catch (error) {
+        response.error(req, res, error.message, 500); 
+    }
+})
+
+router.post('/prueba/:altura', async (req, res) => {
+    try {
+        const  base= req.body.base
+        const altura= req.params.altura
+        const respuesta=  area(base,altura)
+        response.success(req, res,`la respuesta es: ${respuesta}`, 200);    
     } catch (error) {
         response.error(req, res, error.message, 500); 
     }
