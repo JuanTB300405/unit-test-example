@@ -2,105 +2,53 @@ const { Router } = require('express');
 const response = require('../../network/response')
 const router = Router();
 const ctrl = require('./index');
-const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm} = require('../../calculators/environment')
+const { tiMonth,fuelEnergySelector,electricalConsumption,costElectricalKM,combustionConsumption,fuelConsumption,fuelEfficiency,fuelCostKm,energyKm,emisionKm,savedEnergy,avoidedEmissions,monthlySavings,annualSavings,youngTree} = require('../../calculators/environment')
 const { areaCirculo } = require('../../calculators/calculo1')
 const area =  require('../../calculators/personal')
 const tableInjected = 'my_table'
 
-router.get('/env_test/:fuel', async (req, res) => {
-    const fuel = req.params.fuel
-
-    const electrical_consumption = electricalConsumption(81.14, 200)
-    const combustion_consumption = combustionConsumption(electrical_consumption)
-    const fuel_selector = fuelEnergySelector(fuel)
-    const fuel_consuption = fuelConsumption(combustion_consumption, fuel_selector["fuel_energy"])
-
+router.get('/enviroment/:ipc/:fuel/:nominal_energy/:autonomy_nominal', (req, res) => {
     try {
-        const list = {
-            "month_inflation": tiMonth(2.8),
-            "fuel_selected": fuel_selector,
-            "electrical_consuption": electrical_consumption, 
-            "cost_electrical_km": costElectricalKM(electrical_consumption, 238.25), 
-            "combustion_consuption": combustion_consumption, 
-            "fuel_consuption": fuel_consuption,
-            "fuel_eficiency": fuelEfficiency(fuel_consuption),
-            "fuel_cost_km": fuelCostKm(16700, fuel_consuption),
-            "Texto": 10
-        }
-        response.success(req, res, list, 200);    
+        const annual_use=2;
+        const ipc= tiMonth(parseFloat(req.params.ipc))
+        const fes = fuelEnergySelector(req.params.fuel)
+        const EC= electricalConsumption(parseFloat(req.params.nominal_energy),parseFloat(req.params.autonomy_nominal))
+        const CEK = costElectricalKM(EC,3);
+        const CC =combustionConsumption(EC);
+        const FuelC= fuelConsumption(CC,fes.fuel_energy)
+        const FE=fuelEfficiency(FuelC);
+        const FC=fuelCostKm(fes.fuel_price,FuelC)
+        const EK=energyKm(CC);
+        const eK=emisionKm(fes.emision_factor,EK);
+        const SE=savedEnergy(CC,EC,annual_use);
+        const AE=avoidedEmissions(eK,annual_use);
+        const MS=monthlySavings(FC,CEK,annual_use);
+        const AS=annualSavings(MS,ipc);
+        const YT=youngTree(AE);
+  
+
+
+        let list ={}
+        list["it_Month"]=ipc
+        list["fuel_energy_selector"]=fes;
+        list["electrical_consopcion"]=EC;
+        list["costElectricalKM"]=CEK;
+        list["combustionConsumption"]=CC;
+        list["fuelConsumption"] = FuelC;
+        list["fuelEfficiency"] = FE;
+        list["fuelCostKm"] = FC;
+        list["energyKm"]=EK;
+        list["emisionKm"]=eK;
+        list["savedEnergy"]=SE;
+        list["avoidedEmissions"]=AE;
+        list["monthlySavings"] = MS;
+        list["annualSavings"]=AS;
+        list["youngTree"]=YT;
+
+        response.success(req, res,list, 200);    
     } catch (error) {
         response.error(req, res, error.message, 500); 
     }
 })
-
-router.get('/list', async (req, res) => {
-    try {
-        const id = req.params.id
-        const list = await ctrl.list(tableInjected);
-        response.success(req, res, list, 200);    
-    } catch (error) {
-        response.error(req, res, error.message, 500); 
-    }
-})
-
-router.post('/prueba/:altura', async (req, res) => {
-    try {
-        const  base= req.body.base
-        const altura= req.params.altura
-        const respuesta=  area(base,altura)
-        response.success(req, res,`la respuesta es: ${respuesta}`, 200);    
-    } catch (error) {
-        response.error(req, res, error.message, 500); 
-    }
-})
-
-
-router.get('/test_network/:radio', async (req, res) => {
-    try {
-        const radio = req.params.radio
-        response.success(req, res, areaCirculo(radio), 200);    
-    } catch (error) {
-        response.error(req, res, error.message, 500); 
-    }
-})
-
-
-
-router.get('/:id', async (req, res) => {
-    try {
-        const id = req.params.id
-        const list = await ctrl.listById(tableInjected, id);
-        response.success(req, res, list, 200);    
-    } catch (error) {
-        response.error(req, res, error.message, 500); 
-    }
-})
-
-
-router.post('/add', async (req, res) => {
-    try {
-        await ctrl.addElement(tableInjected, data = {
-            "data": req.body.data,
-        });
-        response.success(req, res, `Item Created`, 200);    
-    } catch (error) {
-        response.error(req, res, error.message, 500);
-    }
-});
-
-
-router.put('/update', async (req, res) => {
-    try {
-        let { id, data } = req.body;
-        await ctrl.updateElement(tableInjected, data = {
-            "id": id,
-            "data": data,
-        });
-        response.success(req, res, `Item updated`, 200);     
-    } catch (error) {
-        response.error(req, res, error.message, 500);
-    }
-});
-
 
 module.exports = router ;
