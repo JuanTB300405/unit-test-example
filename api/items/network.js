@@ -2,10 +2,9 @@ const { Router } = require('express');
 const response = require('../../network/response')
 const router = Router();
 const ctrl = require('./index');
-const { tiMonth,fuelEnergySelector,electricalConsumption,costElectricalKM,combustionConsumption,fuelConsumption,fuelEfficiency,fuelCostKm,energyKm,emisionKm,savedEnergy,avoidedEmissions,monthlySavings,annualSavings,youngTree} = require('../../calculators/environment')
-const { areaCirculo } = require('../../calculators/calculo1')
-const area =  require('../../calculators/personal')
+const {tiMonth, fuelEnergySelector, electricalConsumption, costElectricalKM, combustionConsumption, fuelConsumption, fuelEfficiency, fuelCostKm, energyKm,emisionKm,savedEnergy,avoidedEmissions,monthlySavings,annualSavings,youngTree, oldTree, energyH2Cylinders, energyH2LowPresure, energyConsumed, hydrogenMass, litersRequired} = require('../../calculators/environment')
 const tableInjected = 'my_table'
+
 
 router.get('/enviroment/:ipc/:fuel/:nominal_energy/:autonomy_nominal', (req, res) => {
     try {
@@ -25,6 +24,12 @@ router.get('/enviroment/:ipc/:fuel/:nominal_energy/:autonomy_nominal', (req, res
         const MS=monthlySavings(FC,CEK,annual_use);
         const AS=annualSavings(MS,ipc);
         const YT=youngTree(AE);
+        const OlTr=oldTree(AE);
+        const EnLi=energyH2Cylinders(req.params.nominal_energy);
+        const EnLo=energyH2LowPresure(EnLi);
+        const En_Co=energyConsumed(EnLo);
+        const HyMa=hydrogenMass(EnLo);
+        const LiRe=litersRequired(HyMa);
   
 
 
@@ -44,6 +49,12 @@ router.get('/enviroment/:ipc/:fuel/:nominal_energy/:autonomy_nominal', (req, res
         list["monthlySavings"] = MS;
         list["annualSavings"]=AS;
         list["youngTree"]=YT;
+        list["oldTree"]=OlTr;
+        list["energyH2Cylinders"]=EnLi;
+        list["energyH2LowPresure"]=EnLo;
+        list["energyConsumed"]=En_Co;
+        list["hydrogenMass"]=HyMa;
+        list["litersRequired"]=LiRe;
 
         response.success(req, res,list, 200);    
     } catch (error) {
