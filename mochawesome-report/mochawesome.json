@@ -5,9 +5,9 @@
     "passes": 9,
     "pending": 7,
     "failures": 5,
-    "start": "2025-11-08T11:59:56.834Z",
-    "end": "2025-11-08T11:59:56.850Z",
-    "duration": 16,
+    "start": "2025-11-08T12:07:36.130Z",
+    "end": "2025-11-08T12:07:36.142Z",
+    "duration": 12,
     "testsRegistered": 21,
     "passPercent": 64.28571428571429,
     "pendingPercent": 33.33333333333333,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "cdbf71e5-d46a-451f-8a25-97a05ad057d7",
+      "uuid": "cf051060-9dcc-46d7-8743-154302f4fd92",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fa0a6990-7a77-4c04-900b-94777288aaab",
+          "uuid": "0e15d157-46f2-4c98-974b-54182ff368bb",
           "title": "test que deben dar pass",
           "fullFile": "/workspaces/unit-test-example/test/env_test.js",
           "file": "/test/env_test.js",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "assert.strictEqual(tiMonth(2), 0.0016515813019202241);",
               "err": {},
-              "uuid": "170d1772-06e6-41cd-95f6-2aa660c4a6b6",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "b3452784-2ebf-448b-a5dc-012329fe6ed0",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "assert.deepStrictEqual(fuelEnergySelector(\"gasoline\"), {\n  \"fuel_price\": 16700,\n  \"fuel_energy\": 35.58,\n  \"emision_factor\": 69.25\n});",
               "err": {},
-              "uuid": "92e061b1-f6d6-4596-948c-bb7de6436a99",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "da753fa3-10b3-4dc6-94ab-656178f34219",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "assert.strictEqual(electricalConsumption(2, 2), 1.1111111111111112);",
               "err": {},
-              "uuid": "d70be64e-2e89-490f-9119-1f631f321f5d",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "0f8730df-25e8-4a22-ada4-d4f3ad208500",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "assert.strictEqual(costElectricalKM(1.1111111111111112, 3), 3.3333333333333335);",
               "err": {},
-              "uuid": "a8565d66-bd87-48c4-85b1-17e851aa5dd9",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "554e27e6-0f72-4730-b743-25323a70e87b",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "assert.strictEqual(combustionConsumption(1.1111111111111112), 4.11522633744856);",
               "err": {},
-              "uuid": "7de82e99-53f1-45a9-a110-850284635d46",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "41a60f5b-7f37-4076-8a28-626125fa1ff9",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "assert.strictEqual(fuelConsumption(4.11522633744856, 35.58), 0.11566122364948173);",
               "err": {},
-              "uuid": "b6cc1360-2363-4f6d-b54d-ea7ddc5837cb",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "d0ada866-6a10-45b7-87ff-712b9a69fb64",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -155,8 +155,8 @@
               "context": null,
               "code": "assert.strictEqual(fuelEfficiency(0.11566122364948173), 8.64594);",
               "err": {},
-              "uuid": "d6775ab9-9057-4ca6-aae1-0f416c189833",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "ce9f6a29-c553-41ee-83c6-b38b19f7d647",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -173,8 +173,8 @@
               "context": null,
               "code": "assert.strictEqual(energyKm(4.11522633744856), 14814814.814814815);",
               "err": {},
-              "uuid": "e6053dad-5fcf-49d6-ac83-19178d319653",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "51ec0b88-dcc5-4cc3-a9a9-d59af2698631",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             },
@@ -191,23 +191,23 @@
               "context": null,
               "code": "assert.strictEqual(fuelCostKm(16700, 0.11566122364948173), 1931.5424349463449);",
               "err": {},
-              "uuid": "316adf5e-544c-4c3f-bc10-193f98eeba56",
-              "parentUUID": "fa0a6990-7a77-4c04-900b-94777288aaab",
+              "uuid": "c2c9c441-5fc2-4527-8352-a8634811e6d8",
+              "parentUUID": "0e15d157-46f2-4c98-974b-54182ff368bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "170d1772-06e6-41cd-95f6-2aa660c4a6b6",
-            "92e061b1-f6d6-4596-948c-bb7de6436a99",
-            "d70be64e-2e89-490f-9119-1f631f321f5d",
-            "a8565d66-bd87-48c4-85b1-17e851aa5dd9",
-            "7de82e99-53f1-45a9-a110-850284635d46",
-            "b6cc1360-2363-4f6d-b54d-ea7ddc5837cb",
-            "d6775ab9-9057-4ca6-aae1-0f416c189833",
-            "e6053dad-5fcf-49d6-ac83-19178d319653",
-            "316adf5e-544c-4c3f-bc10-193f98eeba56"
+            "b3452784-2ebf-448b-a5dc-012329fe6ed0",
+            "da753fa3-10b3-4dc6-94ab-656178f34219",
+            "0f8730df-25e8-4a22-ada4-d4f3ad208500",
+            "554e27e6-0f72-4730-b743-25323a70e87b",
+            "41a60f5b-7f37-4076-8a28-626125fa1ff9",
+            "d0ada866-6a10-45b7-87ff-712b9a69fb64",
+            "ce9f6a29-c553-41ee-83c6-b38b19f7d647",
+            "51ec0b88-dcc5-4cc3-a9a9-d59af2698631",
+            "c2c9c441-5fc2-4527-8352-a8634811e6d8"
           ],
           "failures": [],
           "pending": [],
@@ -218,7 +218,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "f7b38f9b-7c78-4f58-bc03-e435445434b9",
+          "uuid": "7afe04d0-fafa-4e91-b728-e72221824491",
           "title": "pruebas que deben dar fail",
           "fullFile": "/workspaces/unit-test-example/test/env_test.js",
           "file": "/test/env_test.js",
@@ -229,7 +229,7 @@
               "title": "prueba para la funcion emisionKm",
               "fullTitle": "pruebas que deben dar fail prueba para la funcion emisionKm",
               "timedOut": false,
-              "duration": 5,
+              "duration": 1,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -242,8 +242,8 @@
                 "estack": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n1025.9259259259259\n    at Context.<anonymous> (test/env_test.js:72:12)\n    at process.processImmediate (node:internal/timers:485:21)",
                 "diff": ""
               },
-              "uuid": "5c34c7bc-2040-4cf5-8585-cee1baedf213",
-              "parentUUID": "f7b38f9b-7c78-4f58-bc03-e435445434b9",
+              "uuid": "c3259640-417c-4427-bcb8-524b732ed5ab",
+              "parentUUID": "7afe04d0-fafa-4e91-b728-e72221824491",
               "isHook": false,
               "skipped": false
             },
@@ -264,8 +264,8 @@
                 "estack": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n6.008230452674897\n    at Context.<anonymous> (test/env_test.js:76:12)\n    at process.processImmediate (node:internal/timers:485:21)",
                 "diff": ""
               },
-              "uuid": "32ce1a50-63b9-4743-a5c2-64204f838fdc",
-              "parentUUID": "f7b38f9b-7c78-4f58-bc03-e435445434b9",
+              "uuid": "766b536a-27fb-440f-9adc-006a22930005",
+              "parentUUID": "7afe04d0-fafa-4e91-b728-e72221824491",
               "isHook": false,
               "skipped": false
             },
@@ -286,8 +286,8 @@
                 "estack": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n0.0020518518518518516\n    at Context.<anonymous> (test/env_test.js:80:12)\n    at process.processImmediate (node:internal/timers:485:21)",
                 "diff": ""
               },
-              "uuid": "309bfb7b-4836-42c0-bf9d-6e44016b3ba7",
-              "parentUUID": "f7b38f9b-7c78-4f58-bc03-e435445434b9",
+              "uuid": "0a9d6f8b-34f0-461b-8d7c-506251abaf45",
+              "parentUUID": "7afe04d0-fafa-4e91-b728-e72221824491",
               "isHook": false,
               "skipped": false
             },
@@ -308,8 +308,8 @@
                 "estack": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n321.3681836021686\n    at Context.<anonymous> (test/env_test.js:84:12)\n    at process.processImmediate (node:internal/timers:485:21)",
                 "diff": ""
               },
-              "uuid": "0017d7e6-2134-4fc8-b0cf-2e3a573b4dc9",
-              "parentUUID": "f7b38f9b-7c78-4f58-bc03-e435445434b9",
+              "uuid": "ac8ce149-b7bc-46fb-bf22-b3fa65949775",
+              "parentUUID": "7afe04d0-fafa-4e91-b728-e72221824491",
               "isHook": false,
               "skipped": false
             },
@@ -330,8 +330,8 @@
                 "estack": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n3891.6423094465686\n    at Context.<anonymous> (test/env_test.js:88:12)\n    at process.processImmediate (node:internal/timers:485:21)",
                 "diff": ""
               },
-              "uuid": "19b98986-d225-4505-88fc-4b6a07a1b9dd",
-              "parentUUID": "f7b38f9b-7c78-4f58-bc03-e435445434b9",
+              "uuid": "133f3fda-5df8-42e3-846a-608e34d9e814",
+              "parentUUID": "7afe04d0-fafa-4e91-b728-e72221824491",
               "isHook": false,
               "skipped": false
             }
@@ -339,21 +339,21 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5c34c7bc-2040-4cf5-8585-cee1baedf213",
-            "32ce1a50-63b9-4743-a5c2-64204f838fdc",
-            "309bfb7b-4836-42c0-bf9d-6e44016b3ba7",
-            "0017d7e6-2134-4fc8-b0cf-2e3a573b4dc9",
-            "19b98986-d225-4505-88fc-4b6a07a1b9dd"
+            "c3259640-417c-4427-bcb8-524b732ed5ab",
+            "766b536a-27fb-440f-9adc-006a22930005",
+            "0a9d6f8b-34f0-461b-8d7c-506251abaf45",
+            "ac8ce149-b7bc-46fb-bf22-b3fa65949775",
+            "133f3fda-5df8-42e3-846a-608e34d9e814"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 6,
+          "duration": 2,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+          "uuid": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
           "title": "pruebas que deben dar cancelado o Skiped",
           "fullFile": "/workspaces/unit-test-example/test/env_test.js",
           "file": "/test/env_test.js",
@@ -373,8 +373,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "e51a9a31-8d8c-4324-b535-71c6c75cfd5c",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "dba70e32-1430-4cb5-943e-bb7c65a2cf6e",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             },
@@ -391,8 +391,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "93e7cd66-c426-412b-b7b2-25b34b7466dd",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "9dc9e29f-03ef-4481-b6dd-4af64a000cc5",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             },
@@ -409,8 +409,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "f34690cd-eb10-4e7f-9094-7e78fb5687b9",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "ee84d447-1ec0-4ffe-9d76-73e3e12d86bd",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             },
@@ -427,8 +427,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "1f5e3b0a-f716-4bf9-bbd1-c35c6c11a00d",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "756cf432-abd6-4429-a7e8-fbfd617eaa61",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             },
@@ -445,8 +445,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "09935b2a-881d-4498-b594-bdf39ebed237",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "f1a499d9-054a-4bbe-9d3e-0e1c5fc367b0",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             },
@@ -463,8 +463,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "9755744e-0799-4f71-8715-f49babe215ef",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "724752da-6b12-4c88-91ec-3ed689a0445e",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             },
@@ -481,8 +481,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "c85c2518-668d-4427-842e-03a2d0c7dd62",
-              "parentUUID": "dbe8c08a-bbb3-4c25-b65a-9c6104c5e6ae",
+              "uuid": "a93ef10b-c6a5-4e70-891d-b44e6aff9485",
+              "parentUUID": "42be57b7-73b0-47f1-bba9-8a0538ec232c",
               "isHook": false,
               "skipped": false
             }
@@ -491,13 +491,13 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "e51a9a31-8d8c-4324-b535-71c6c75cfd5c",
-            "93e7cd66-c426-412b-b7b2-25b34b7466dd",
-            "f34690cd-eb10-4e7f-9094-7e78fb5687b9",
-            "1f5e3b0a-f716-4bf9-bbd1-c35c6c11a00d",
-            "09935b2a-881d-4498-b594-bdf39ebed237",
-            "9755744e-0799-4f71-8715-f49babe215ef",
-            "c85c2518-668d-4427-842e-03a2d0c7dd62"
+            "dba70e32-1430-4cb5-943e-bb7c65a2cf6e",
+            "9dc9e29f-03ef-4481-b6dd-4af64a000cc5",
+            "ee84d447-1ec0-4ffe-9d76-73e3e12d86bd",
+            "756cf432-abd6-4429-a7e8-fbfd617eaa61",
+            "f1a499d9-054a-4bbe-9d3e-0e1c5fc367b0",
+            "724752da-6b12-4c88-91ec-3ed689a0445e",
+            "a93ef10b-c6a5-4e70-891d-b44e6aff9485"
           ],
           "skipped": [],
           "duration": 0,
